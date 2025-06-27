@@ -1,97 +1,42 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
-* {
-  font-family: "Poppins", sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-background-color: #111111;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.App {
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
   text-align: center;
 }
 
-h1 {
-  color: black;
-  margin-bottom: 0.5rem;
-  font-size: 1.75rem;
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-.TodoWrapper {
-  background: #fff;
-  margin-top: 5rem;
-  padding: 2rem;
-  border-radius: 45px;
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.TodoForm {
-  width: 100%;
-  margin-bottom: 1rem;
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
 }
 
-.todo-input {
-  outline: none;
-  background: none;
-  border: 0.5px solid rgba(82, 82, 82, 0.669);
-  padding: 0.75rem 1rem;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  width: 300px;
-  color: black;
-  border-bottom-left-radius: 35px;
-  border-top-left-radius: 35px;
+.card {
+  padding: 2em;
 }
 
-.todo-input::placeholder {
-  color: black;
-}
-
-.todo-btn {
-  background: black;
-  color: #fff;
-  border: none;
-  padding: 0.75rem 1rem;
-  cursor: pointer;
-  border-top-right-radius: 35px;
-  border-bottom-right-radius: 35px;
-  border: 0.5px solid #1f4037;
-
-}
-
-.Todo {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #ececec;
-  color: black;
-  padding: 0.75rem 1rem;
-  border-radius: 35px;
-  margin-bottom: 1rem;
-}
-
-.fa-trash {
-  margin-left: 0.75rem;
-}
-
-.incompleted {
-  color: #fff;
-  cursor: pointer;
-}
-
-.completed {
-  color: #aaaaaa;
-  text-decoration: line-through;
-  cursor: pointer;
-}
-
-.edit-icon,
-.delete-icon {
-  cursor: pointer;
+.read-the-docs {
+  color: #888;
 }
